@@ -2,8 +2,8 @@
 ---
 
 run:
-    DetourDemo:
-        cwd: recastnavigation/DetourDemo/DetourDemo
+    RecastDemo:
+        cwd: recastnavigation/RecastDemo/Bin
 
 exports:
     header-dirs:

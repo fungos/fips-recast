@@ -127,9 +127,6 @@ if (FIPS_ANDROID OR FIPS_MACOS OR FIPS_WINDOWS OR FIPS_LINUX OR FIPS_IOS)
             if (FIPS_WINDOWS)
                 fips_libs(opengl32 glu32 sdlmain sdl)
             endif()
-
-            # is there a way to install data files to deploy directory using fips?
-            # to run RecastDemo we need some binaries from RecastDemo/Bin/
         fips_end_app()
     endif()
 endif()
