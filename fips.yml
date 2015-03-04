@@ -1,0 +1,20 @@
+# fips-recast
+---
+
+run:
+    DetourDemo:
+        cwd: recastnavigation/DetourDemo/DetourDemo
+
+exports:
+    header-dirs:
+        - recastnavigation/Recast/Include
+        - recastnavigation/Detour/Include
+        - recastnavigation/DetourTileCache/Include
+        - recastnavigation/DetourCrowd/Include
+        - recastnavigation/DebugUtils/Include
+    modules:
+        Recast: .
+        Detour: .
+        DetourTileCache: .
+        DetourCrowd: .
+        DebugUtils: .
