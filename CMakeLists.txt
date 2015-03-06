@@ -114,7 +114,6 @@ if (FIPS_ANDROID OR FIPS_MACOS OR FIPS_WINDOWS OR FIPS_LINUX OR FIPS_IOS)
                 fips_dir(recastnavigation/RecastDemo/Source)
                 fips_files(SDLMain.m)
                 fips_libs(OpenGL.framework SDL.framework Cocoa.framework) # Need testing
-                set_target_properties(RecastDemo PROPERTIES COMPILE_FLAGS "-Wunused-value -Wshadow -Wreorder -Wsign-compare -Wall")
             endif()
 
             if (FIPS_LINUX)
@@ -128,6 +127,9 @@ if (FIPS_ANDROID OR FIPS_MACOS OR FIPS_WINDOWS OR FIPS_LINUX OR FIPS_IOS)
                 fips_libs(opengl32 glu32 sdlmain sdl)
             endif()
         fips_end_app()
+        if (FIPS_MACOS)
+            set_target_properties(RecastDemo PROPERTIES COMPILE_FLAGS "-Wunused-value -Wshadow -Wreorder -Wsign-compare -Wall")
+        endif()
     endif()
 endif()
 
