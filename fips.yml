@@ -1,6 +1,10 @@
 # fips-recast
 ---
 
+imports:
+    fips-glfw:
+        git: https://github.com/floooh/fips-glfw.git
+
 run:
     RecastDemo:
         cwd: recastnavigation/RecastDemo/Bin
