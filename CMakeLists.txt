@@ -78,7 +78,7 @@ fips_begin_lib(DebugUtils)
 fips_end_lib()
 
 if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
-    fips_begin_app(RecastDemo windowed)
+    fips_begin_app(RecastDemo cmdline)
         include_directories(
             recastnavigation/RecastDemo/Source
             recastnavigation/RecastDemo/Include
@@ -113,7 +113,7 @@ if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
         fips_dir(recastnavigation/RecastDemo/Contrib/fastlz)
         fips_files(fastlz.c fastlz.h)
 
-        fips_deps(DebugUtils Detour DetourCrowd DetourTileCache Recast)
+        fips_deps(DebugUtils Detour DetourCrowd DetourTileCache Recast glfw3)
 
         if (FIPS_MACOS)
             fips_dir(recastnavigation/RecastDemo/Include)
