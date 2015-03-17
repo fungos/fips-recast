@@ -79,6 +79,10 @@ fips_end_lib()
 
 if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
     fips_begin_app(RecastDemo cmdline)
+        if (FIPS_WINDOWS)
+            include_directories(include)
+        endif()
+        add_definitions(-DGLFW_INCLUDE_GLEXT)
         include_directories(
             recastnavigation/RecastDemo/Source
             recastnavigation/RecastDemo/Include
@@ -118,15 +122,14 @@ if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
         if (FIPS_MACOS)
             fips_dir(recastnavigation/RecastDemo/Include)
             fips_dir(recastnavigation/RecastDemo/Source)
-            fips_libs(OpenGL.framework Cocoa.framework) # Need testing
         endif()
 
         if (FIPS_WINDOWS)
-            fips_libs(opengl32 glu32)
+            fips_libs(opengl32)
         endif()
 
         if (FIPS_LINUX)
-            fips_libs(X11 Xrandr Xi Xinerama Xxf86vm Xcursor GLU GL)
+            fips_libs(X11 Xrandr Xi Xinerama Xxf86vm Xcursor GL)
         endif()
 
     fips_end_app()
