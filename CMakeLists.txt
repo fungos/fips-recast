@@ -78,7 +78,7 @@ fips_begin_lib(DebugUtils)
 fips_end_lib()
 
 if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
-    fips_begin_app(RecastDemo windowed)
+    fips_begin_app(RecastDemo cmdline)
         if (FIPS_WINDOWS)
             include_directories(include)
         endif()
