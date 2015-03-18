@@ -79,7 +79,6 @@ fips_end_lib()
 
 if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
     fips_begin_app(RecastDemo cmdline)
-        add_definitions(-DGLFW_INCLUDE_GLEXT)
         include_directories(
             recastnavigation/RecastDemo/Source
             recastnavigation/RecastDemo/Include
