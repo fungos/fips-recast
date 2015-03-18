@@ -113,7 +113,7 @@ if (FIPS_MACOS OR FIPS_LINUX OR FIPS_WINDOWS)
         fips_dir(recastnavigation/RecastDemo/Contrib/fastlz)
         fips_files(fastlz.c fastlz.h)
 
-        fips_deps(DebugUtils Detour DetourCrowd DetourTileCache Recast glfw3)
+        fips_deps(DebugUtils Detour DetourCrowd DetourTileCache Recast GLEW glfw3)
 
         if (FIPS_MACOS)
             fips_dir(recastnavigation/RecastDemo/Include)
